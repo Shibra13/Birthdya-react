@@ -2,7 +2,7 @@ const CONFIG = {
   songTitle: 'Our Song',
 
   message:
-    "Happy Birthday daaaa, my partner. ❤️🎂 You are the best gift life has ever given me. I'm so lucky that you came into my life and became such a beautiful part of it. 🫶🏻 No big words… just you, your smile, and your presence mean so much to me. 🤍 Happy Birthday again daaaa! ❤️ My favourite person, my best gift, my partner. 🫂✨",
+    "Happy Birthday daaaa, my partner. ❤️🎂 You are the best gift life has ever given me. I'm so lucky that you came into my life and became such a beautiful part of it. 🫶🏻 No big words… just you, your smile, and your presence mean so much to me. 🤍 Happy Birthday daaaa! ❤️ My favourite person, my best gift, my partner. 🫂✨",
 
   finalMessage: `நீ என்பவன்… ❤️
 
