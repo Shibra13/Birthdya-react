@@ -84,6 +84,24 @@ export default function App() {
       });
     }, 700);
   };
+ 
+  const handleBackHome = () => {
+    setFinalSurprise(false);
+
+    const audio = audioRef.current;
+
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+
+      audio.src = '/audio/bgm1.mpeg';
+      audio.load();
+
+      audio.play().catch(() => {});
+    }
+  };
+
+  
 
   return (
     <>
@@ -116,6 +134,7 @@ export default function App() {
 
           <FinalSurprise
             onFinalReveal={() => setFinalSurprise(true)}
+            onBackHome={handleBackHome}
           />
         </div>
       )}
