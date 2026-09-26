@@ -86,22 +86,27 @@ export default function App() {
   };
  
   const handleBackHome = () => {
-    setFinalSurprise(false);
+  setFinalSurprise(false);
 
-    const audio = audioRef.current;
+  const audio = audioRef.current;
 
-    if (audio) {
-      audio.pause();
-      audio.currentTime = 0;
+  if (audio) {
+    audio.pause();
 
-      audio.src = '/audio/bgm1.mpeg';
-      audio.load();
+    audio.src = '/audio/bgm1.mpeg';
+    audio.currentTime = 0;
+    audio.volume = 1.0;
 
-      audio.play().catch(() => {});
-    }
-  };
+    audio.play().catch((error) => {
+      console.log('Audio play blocked:', error);
+    });
+  }
 
-  
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
 
   return (
     <>

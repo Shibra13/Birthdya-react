@@ -235,7 +235,7 @@ export default function FinalSurprise({onFinalReveal,onBackHome}) {
             I Love You More Than Words Can Say. ❤️
           </div>
 
-         <button
+         {/* <button
   onClick={() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -251,7 +251,24 @@ export default function FinalSurprise({onFinalReveal,onBackHome}) {
             className="mt-10 inline-flex items-center gap-2 rounded-full border border-starlight/40 bg-white/[0.03] px-8 py-3.5 font-sans text-sm font-medium text-ink shadow-glow backdrop-blur-sm transition duration-300 hover:border-starlight/70 hover:bg-white/[0.06] active:scale-[0.98]"
           >
             🏠 Back to Home ❤️
-          </button>
+          </button> */}
+
+          <button
+  onClick={() => {
+    setRevealed(false);
+    setQuizStarted(false);
+    setSubmitted(false);
+    setSelectedAnswers({});
+    setScore(0);
+
+    onBackHome?.();
+  }}
+
+  className="mt-10 inline-flex items-center gap-2 rounded-full border border-starlight/40 bg-white/[0.03] px-8 py-3.5 font-sans text-sm font-medium text-ink shadow-glow backdrop-blur-sm transition duration-300 hover:border-starlight/70 hover:bg-white/[0.06] active:scale-[0.98]"
+          
+>
+  🏠 Back to Home ❤️
+</button>
         </div>
       )}
     </section>

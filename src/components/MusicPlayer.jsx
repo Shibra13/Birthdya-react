@@ -216,27 +216,51 @@ const MusicPlayer = forwardRef(function MusicPlayer(
     }
   };
 
+  // useEffect(() => {
+  //   const audio = audioRef.current;
+
+  //   if (!audio || !shown) return;
+
+  //   if (finalSurprise) {
+  //     audio.pause();
+  //     audio.currentTime = 0;
+  //     audio.src = '/audio/final.mpeg';
+  //     audio.load();
+
+  //     audio
+  //       .play()
+  //       .then(() => {
+  //         setPlaying(true);
+  //       })
+  //       .catch(() => {
+  //         setPlaying(false);
+  //       });
+  //   }
+  // }, [finalSurprise, shown, audioRef]);
+
   useEffect(() => {
-    const audio = audioRef.current;
+  const audio = audioRef.current;
 
-    if (!audio || !shown) return;
+  if (!audio || !shown) return;
 
-    if (finalSurprise) {
-      audio.pause();
-      audio.currentTime = 0;
-      audio.src = '/audio/final.mpeg';
-      audio.load();
+  const song = finalSurprise
+    ? '/audio/final.mpeg'
+    : '/audio/bgm1.mpeg';
 
-      audio
-        .play()
-        .then(() => {
-          setPlaying(true);
-        })
-        .catch(() => {
-          setPlaying(false);
-        });
-    }
-  }, [finalSurprise, shown, audioRef]);
+  audio.pause();
+  audio.src = song;
+  audio.currentTime = 0;
+  audio.volume = 1.0;
+
+  audio.play()
+    .then(() => {
+      setPlaying(true);
+    })
+    .catch(() => {
+      setPlaying(false);
+    });
+}, [finalSurprise, shown, audioRef]);
+
 
   return (
     <>
