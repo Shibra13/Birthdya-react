@@ -161,7 +161,7 @@ export default function Opening({ onOpen, closing }) {
         </p>
 
         <h1 className="relative mt-5 max-w-xl font-serif text-5xl font-medium leading-[1.05] text-glow sm:text-6xl md:text-7xl">
-          My Dr. Partner
+          My dr  Partner
         </h1>
 
         <p className="relative mt-6 max-w-sm font-sans text-sm font-light text-ink-muted sm:text-base">
